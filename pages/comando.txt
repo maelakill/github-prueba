@@ -28,3 +28,35 @@ el otro en una sola,
  puedo modificar, solucionar errores, probar, eliminar. 
 
 9. git branch:
+primero pongo el comnado git branch para confirmar cuantas ramas estoy utilizando, 
+luego le hago un git status. luego vuelvo a colocar git branch pero en esta ocasion 
+le voy a sumar el nombre que le voy a dar a mi nueva rama.
+ej: git branch rama_nueva 
+ej: git branch rama-nueva 
+siempre el nombre tiene que tener un guion bajo o medio, no puede haber espacios. 
+luego de este paso vuelvo a colocar git branch para que me diga que ramas hay. 
+ahi van a saltar las dos, la master que es la principal y la nueva que adheri 
+pero en color blanco porque aun sigo utilizando la rama principal que es la master.
+
+para empezar a trabajar en la rama nueva coloco el siguiente comando:
+10:git checkout rama_nueva
+hago los cambios que necesito, pruebo, etc. 
+ahora si quisiera volver a la rama principal para hacerlo hago el mismo comando anterio:
+git checkout master y me va a llevar a la rama principal.
+
+para borrar una rama tambien hay que tener en cuenta que no podemos estar sobre esa ni ninguna otra rama que no sea la principal.
+para borrar una rama coloco el siquiente comando:
+git branch -D y el nombre de la rama 
+ej: 
+git branch -D rama-borrar
+
+git checkout: listar commits
+nos podemos mover entre commits
+para hacerlo primero hacemos un 
+git log --onelineluego copiamos el commit que queremos utilizar, 
+luego le damos el comando
+ej: git checkout 2c8571c  (los numeros esos son el commit que yo elegi)
+
+GIT MERGE:
+esto sirve para fucionar todos los cambios que realizamos en las ramas
+ y volcarlas a la rama principal.
