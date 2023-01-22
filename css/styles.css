@@ -496,6 +496,7 @@ margin-bottom: 3rem;
     background-image: linear-gradient(to right, green,blue );
     background-image: linear-gradient(to top, black, white);
     background-image: linear-gradient(to bottom, violet, grey);
+    background-color: blue;
 
     /*ahora sin direccion (sin el to left, etc por defecto va a ir de arriba hacia abajo */
     background-image: linear-gradient(yellowgreen, beige);}
@@ -649,4 +650,9 @@ h1{
     opacity: 0;
 }
 100%{opacity: 1;}
+}
+/*clase git*/
+.titulo-git{
+    font-size:2rem ;
+    color: white;
 }
