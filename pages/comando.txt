@@ -13,3 +13,18 @@ los archivos que no estan introducidos aun.
 los archivos que faltaban
 
 5.git commit -m "mensaje": esto sirve para confirmar lo que hice en mis archivos, lo subira al repositorio. 
+
+6. git log: esto sirve para ver que ha pasado en nuestro repositorio/proyecto
+
+7. .gitignore (investigar) esto sirve para ignorar algun archivo que no queramos subir al repositorio.
+
+8.git log --oneline: esto es lo mismo que git log, 
+la diferencia radica en que uno manda el comando en varias lineas y 
+el otro en una sola,
+ lo cual se hace mas facil poder leerlo. es mas practico.
+
+ RAMAS: 
+ es una version aparte de la original, 
+ puedo modificar, solucionar errores, probar, eliminar. 
+
+9. git branch:
