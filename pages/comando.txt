@@ -62,3 +62,13 @@ esto sirve para fucionar todos los cambios que realizamos en las ramas
  y volcarlas a la rama principal.
  comango para el merge:
  git merge rama_nueva (nombre de la rama que voy a utilizar)
+
+
+ GITHUB 
+ para subir un archivo que ya lo empece con git pero aun no lo he subido a la nube, tengo que copiar el enlace que me aparece en la pagina de github y copiarlo en mi terminal del vsc.
+ luego tengo que presionar el comando git push -u origin master
+
+ ahora, yo modifico algo en mis index o css, hago todo el proceso de git, 
+ pero luego de hacerlo para poder subirlo a github solo tengo que precionar:
+ git push 
+ y listo se actualizo en el navegador.
