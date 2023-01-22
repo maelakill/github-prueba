@@ -60,3 +60,5 @@ ej: git checkout 2c8571c  (los numeros esos son el commit que yo elegi)
 GIT MERGE:
 esto sirve para fucionar todos los cambios que realizamos en las ramas
  y volcarlas a la rama principal.
+ comango para el merge:
+ git merge rama_nueva (nombre de la rama que voy a utilizar)
