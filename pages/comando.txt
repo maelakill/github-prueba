@@ -1,0 +1,15 @@
+comandos: 
+1. git init: este sirver para empezar a 
+trabajar con GIT. se realiza una sola vez, 
+al comenzar a trabajar
+
+2.git status: me indica en que estado se encuentra
+mi repositorio o carpeta que inicie con GIT 
+
+3.(git add . ): sirve para sumar al repositorio 
+los archivos que no estan introducidos aun.
+
+4. git status: para ver si incorporo o sumo 
+los archivos que faltaban
+
+5.git commit -m "mensaje": esto sirve para confirmar lo que hice en mis archivos, lo subira al repositorio. 
