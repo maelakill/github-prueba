@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header><!--es la cabezara del sitio web-->
+        <!--estructura de un menu de navegacion-->
+        <nav><!--menu de navegacion, puede tener textos, titulos-->
+            <ul>
+                <li><a href="../index.html">inicio</a>
+                    </li>
+                <li>
+                    <a href="nuestrahistoria.html">nuestra historia</a>
+                   </li>
+                <li>
+                    <a href="fotos.html">fotos</a>
+                    </li>
+                <li>
+                    <a href="ubicacion.html">ubicacion</a>
+                    </li>
+                <li>
+                    <a href="contacto.html">contactos</a>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <h1>formularios</h1>
+
+        <a href="https://www.coderhouse.com" target="_blank">ir a coderhouse</a>
+
+        <form action=""></form><!--action: esto requiere otro lenguaje de programacion como js, php;en este momento no va a funcionar -->
+    <fieldset><!--sirve para crear un recuadro que me permita dejar todo el formulario adentro-->
+        <legend>ingresa tus datos</legend>
+        <div>
+        <div>
+            <label for="nombre-apellido">nombre y apellido</label><!--sirve para dar nombre:en este caso al costado de nuestro formulario-->
+            <input  type="text"id="Nombre y apellido" placeholder="nombre y apellido"> <!--type text para escribir cualquier texto-->
+            <!--placeholder sirve para poner como relleno un texto en un formulario cuando no queremos utilizar las labels-->
+        </div>
+                
+        <div>
+            <label for="correo">correo electronico</label>
+                <input type="email" id="correo" placeholder="correo"><!--para rellenar con nuestro email-->
+        
+        </div>
+        <div>
+            <label for="telefono">numero de telefono</label>
+            <input type="tel"  id="telefono" placeholder="telefono"><!--para completar con nuestro numero de telefono-->
+        </div>
+                
+             <div>
+                <label for="productos">cantidad de productos </label>
+                <input type="number" id="productos" placeholder="cantidad de productos"><!--para crecer o decrecer numeros con la fechita-->
+        
+             </div>  
+        
+                <div>
+                    <label for="clave">contraseña</label>
+                    <input type="password" id="clave" placeholder="clave"><!--es un input privado, no se puede ver la contraseña-->
+            
+                </div>
+                <div>
+                    <label for="mensaje">dejenos un mensaje </label>
+                    <textarea id="mensaje" cols="30" rows="10" placeholder="dejanos tu mensaje"></textarea><!--es para ingresar el texto-->
+                </div>
+               
+        
+                <input type="submit" value="enviar formulario"><!--sirve para que se pueda enviar el formulario-->
+        
+                 <input type="reset" value="limpiar formulario"><!--para que lo escrito se borre-->
+        
+                 <div>
+                    <input type="checkbox" name="" id=""><!--para que el usuario pueda elegir la opcion que desee-->
+        
+                 <input type="checkbox" name="" id=""><!--opcion multiple-->
+        
+                 </div>
+                 
+                 <input type="button" value="reservado para js"><!--reservado para js-->
+                 <!--select me crea un menu desplegable-->
+                 <select  id="">
+                    <option disabled>seleccione una opcion</option>
+                    <option value="">opcion1</option>
+                    <option value="">opcion2</option>
+                    <option value="">opcion3</option>
+                    <option value="">opcion4</option>
+                
+                 </select>
+        
+                 <div>
+                    <input type="radio" name="opcion" id="mayor"><!--al darle elnombre lo reconoce como el mismo, pero al darle un id direfente ahi me deja seleccionar o uno o otro -->
+                    <input type="radio" name="opcion" id="menor"><!--radio es opcion unica-->
+                    <input type="radio" name="opcion" id="medio">
+                 </div>
+
+                </div>
+    </fieldset>
+
+        
+    </section>
+   
+</body>
+</html>

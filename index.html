@@ -1,0 +1,203 @@
+<!DOCTYPE html> <!--indica que tipo de documento se esta escribiendo, en este caso es un html-->
+<html lang="es"> <!--es el lenguaje del sitio-->
+
+<head> <!-- es la parte privada del documento.se utiliza como un espacio de comunicacion entre el sitio web y el navegador. es el cerebro de nuestro sitio--> 
+    
+    <meta charset="UTF-8"> <!--sirve para que pueda tomar los caracteres especiales de todos los idiomas del mundo-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--ayuda a que se vea en internet explorer y microsoft edge-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--el ancho del sitio sea lo mas igual posible a la pantalla del dispositivo que use, ej: tablet, celular, tv, compus-->
+
+    <title>clase 4 </title> <!--sirve para que se vea en la solapa del sitio-->
+
+    <link rel="shortcut icon" href="img /nela.jpg" type="image/x-icon"><!--sirve para colocar la foto del logo en donde normalmente vemos el mundo en la pestaña al lado del nombre del sitio-->
+
+
+    <link rel="stylesheet" href="css/styles.css"><!--este link es para incorporar css a mi proyecto, debe estar en el head -->
+
+    
+</head>
+<body class="gradiente-lineal"> <!--todo lo que esta dentro del body es lo que se va a ver en la web-->
+    <p>Bienvenidos a <span>Bombonela</span> </p> <!--ejemplo de etiqueta cerrada-->
+<header id="ir al inicio"><!--es la cabezara del sitio web-->
+    <!--estructura de un menu de navegacion-->
+
+    <a href="index.html"><img class="logo" src="img /nela.jpg" alt="foto nela" title="nela"></a> <!--img sirve para poder insertar imagenes a nuestro sitio. el alt sirve para dejar un nombre de que se trata cuando la imagen no sale en el sitio web -->  <!--title  es un poco mas libre el texto, se usa para cuando posamos el mouse sobre la foto que haga referencia a que es la foto -->
+<!--cuando encierro una imagen, especialmente un logo dentro de un enlace, es porque normalmente el logo siempre nos lleva al sitio de inicio.-->
+<!--en la referencia siempre le conoco el index para que cada vez que se haga clic en el logo me lleve al incio de la pagina-->
+    
+    <nav><!--menu de navegacion, puede tener textos, titulos-->
+        <ul class="menu-nav">
+            <li>
+                <a href="index.html">inicio</a>
+                </li>
+            <li>
+                <a href="pages/nuestrahistoria.html">nuestra historia</a>
+                </li>
+            <li>
+                <a href="pages/fotos.html">fotos</a>
+                </li>
+            <li>
+                 <a href="pages/ubicacion.html">ubicacion</a>
+
+            </li>
+            <li>
+                <a href="pages/contacto.html">contactos</a></li>
+                <li>
+                    <a href="pages/areas.html">areas</a></li>
+                <li>
+                    <a href="#footer">ir al footer</footer></a>
+                </li>
+                <li><a href="pages/areas.html"></a></li>
+        </ul>
+    </nav>
+</header>
+<!--practicando box modeling-->
+<section id="productos2">
+    <!--card 1-->
+<div class="card">
+<img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+
+<h4 class="card__titulo">el sosneado</h4>
+<p class="card__precio" >$6000</p>
+<p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+<p class="card__oferta">50% de descuento</p>
+<button class="boton">comprar tour</button>
+
+
+</div>
+<div class="card">
+    <img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+    
+    <h4 class="card__titulo">el sosneado</h4>
+    <p class="card__precio" >$6000</p>
+    <p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+    <p class="card__oferta">50% de descuento</p>
+    <button class="boton">comprar tour</button>
+    
+    
+    </div>
+    
+    <div class="card">
+        <img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+        
+        <h4 class="card__titulo">el sosneado</h4>
+        <p class="card__precio" >$6000</p>
+        <p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+        <p class="card__oferta">50% de descuento</p>
+        <button class="boton">comprar tour</button>
+        
+        
+        </div>
+        
+        <div class="card">
+            <img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+            
+            <h4 class="card__titulo">el sosneado</h4>
+            <p class="card__precio" >$6000</p>
+            <p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+            <p class="card__oferta">50% de descuento</p>
+            <button class="boton">comprar tour</button>
+            
+            
+            </div>
+            
+            <div class="card">
+                <img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+                
+                <h4 class="card__titulo">el sosneado</h4>
+                <p class="card__precio" >$6000</p>
+                <p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+                <p class="card__oferta">50% de descuento</p>
+                <button class="boton">comprar tour</button>
+                
+                
+                </div>
+        
+                <div class="card">
+                    <img class="card__imagen" src="img /DJI_0776.jpg" alt="el sosneado">
+                    
+                    <h4 class="card__titulo">el sosneado</h4>
+                    <p class="card__precio" >$6000</p>
+                    <p class="card__descripcion">termas del sosneado, ubicadas a pocos kilomentros de la ciudad de malargue y san rafael</p>
+                    <p class="card__oferta">50% de descuento</p>
+                    <button class="boton">comprar tour</button>
+                    
+                    
+                    </div>
+                    
+
+</section><!--dentro del section puedo tener parrafos, div, cualquier tipo de etiqueta, es parecido al div pero para mayor volumen -->
+
+
+
+
+
+
+
+    <section>
+    <h2>CSS IS AWESOME</h2>
+    <div class="css" >css is <strong>awesome</strong>
+    </div>
+</section>
+    
+    <section>
+    <h2 class="sticky">tituto sticky</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quisquam optio recusandae ipsam, rerum sequi ab nobis, at laudantium cum repudiandae quae iure illo eos quibusdam pariatur quidem quaerat eius.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero consequatur officia, magnam sunt odit fugit at quis impedit laudantium error, id adipisci debitis voluptas deleniti. Nobis sunt sequi ratione modi.</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit temporibus rem labore, perspiciatis qui, dicta quaerat repellat dolore beatae voluptatum eligendi! Sit sed saepe earum perspiciatis totam atque architecto repellat.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore illum eius sint exercitationem, sapiente obcaecati qui ad quaerat odio ea tenetur veniam voluptate ipsam sunt, expedita nobis fugit corporis nesciunt.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate incidunt! Tempora laborum ab distinctio nobis excepturi cumque officiis culpa, minima cupiditate iure blanditiis atque laudantium soluta magni modi. Earum!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem necessitatibus molestias facere praesentium magni itaque laudantium, ea minus accusamus fugiat! Laborum odio consequuntur porro sed voluptate ipsam, sunt corrupti.</p>
+</section>
+
+<h1 class="verde">bienvenidos a bombonela</h1>
+<hr> <!--ejemplo de etiqueta abierta, crea una linea en toda la pantalla del sitio web-->
+<br> <!--se utilizan para generar saltos, espacios entre parrafos. pero no se recomienda su uso-->
+<p>este sitio esta creado para ofrecer productos artesanales <br>de altisima calidad <br> con creaciones unicas.</p>
+<div>
+<span>hola <em>como</em>  estas</span><!--etiqueta de linea-->
+<!--la etiqueta em lo que hace es poner la palabra en cursiva-->
+</div><!--etiquetas contenedoras y de bloque, sirve para agrupar: puedo tener parrafos, imagenes, lo que yo quiera-->
+
+<span>todo bien y vos?</span>
+<!--el span es de linea y el div es de bloque, ambos son como hermanos-->
+ <span>  vivo en <strong>san rafael 1</strong>  </span>
+<!--la etiqueta strong lo que hace es poner en negrita el texto seleccionado-->
+ <span>vivo en san rafael 2</span>  <!--tambien se puede utilizar cuando quiero diferenciar un texto de un color a otro, ahi coloco un span-->
+
+<!--etiquetas para titulos-->
+<h1>bombonela</h1><!--solo puede haber uno en nuestro sitio web, ya que es el principal-->
+<h2>bombonela</h2>
+<h3>bombonela</h3>
+<h4 id="amarillo" class="azul">bombonela</h4>
+<h5>bombonela</h5>
+<h6>bombonela</h6>
+<!--tablas-->
+<section>
+   
+<section>
+    <p>soy un parrafo en pixeles </p>
+    <p>soy un parrafo en rem</p>
+    <div><!--todo lo que yo coloque dentro del div tomara la herencia de lo que realice en css, ej: color, tamaño, etc. -->
+        <p>ejemplo de herencia y cascada:herencia</p>
+        <h3>hola como estas</h3>
+        <h5>todo bien y vos</h5>
+    </div>
+</section>
+
+<section><!--entonces si yo en css primero tengo un color y luego le agrego un segundo el sistema me toma el segundo color ya que lee de arriba hacia abajo-->
+    <div>
+        <p>probando herencia y cascada: cascada</p>
+    </div>
+</section> 
+
+
+
+
+<footer id="footer">todos los derechos estan reservados</footer> <!--pie de pagina,todo lo que queramos al final lo colocamos aqui-->
+
+
+</body>
+</html>

@@ -1,0 +1,652 @@
+/*para insertar css a nuestro proyecto primero creamos la carpeta css, luego creamos la hoja de trabajo que se va a llamar styles.css,
+ luego con el link que insertamos en el index de html le decimos a nuestro codigo donde esta ubicada la carpeta*/
+
+/* reseteo css* sirve para decirle a los navegadores que tienen que aplicar solo los margenes que yo le doy,
+ no sus propios margenes. esto lo aplica a todo el archivo html*/
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+
+.css {
+    /*propiedadesdecorativas*/
+    border: solid 1px black;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*propiedades que hacen el problema*/
+    width: 100px;
+    height: 110px;
+
+    /*para solucionar el problema en css podemos utilizar el OVERFLOW*/
+
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    /*display: none; este quita completamente el recuadro */
+    visibility: hidden;/*y este lo que hace es quitarlo pero dejando el espacio original*/
+}
+/*ejemplos de flex-direction row, para que funcione cualquier codigo de flex tengo que anunciar: display-flex, sino no funciona*/
+header{
+    /*este position: fixed es para que jamas se mueva de lugar el elemento al cual le estoy indicando esto*/
+   /position: fixed;
+    top: 0;
+    background-color: aquamarine;
+    width: 100%;
+    z-index: 1;/*esto sirve para decirle al sistema quien se va a superponer primero entre todos los elementos*/
+    display: flex;/*si no anuncio este display, nada va a funcionar, es como una declaracion de permiso de uso*/
+    flex-direction: row-reverse;/*esto lo que hace es forma invertir el orden de los items*/ 
+    flex-direction: row;/*este lo que hace es lo mismo que el display flex, alinear los items. 
+    se usa mucho cuando programamos para celulares*/
+
+    /*ejemplos de justify-content*/
+    justify-content: flex-start;/*no cambia nada, es el predeterminado y deja todo en la izquierda de la pantalla*/
+    justify-content: flex-end;/*lleva todo al lado derecho de la pantalla*/
+    justify-content: center;/*pone todo en el centro*/
+    justify-content: space-between;/*esto separa todo lo que puede a los items*/
+    justify-content: space-around;/*esto le da el mismo espacio entre los limites del navegaro y cada items en el centro*/
+    justify-content: space-evenly;/*crea espacios mas parejos entre los items*/
+
+}
+
+
+/*propiedad para ayudar a la adaptacion de las imagenes a la pantalla*/
+img{
+    max-width: 100%;
+}
+.logo {width: 100px;
+display: block;
+margin: 0 auto;
+}
+nav{
+    margin-top: 1rem;
+}
+
+.menu-nav{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    /*ejemplo de flex direction-column*/
+     /*flex-direction: column;sirve para poner un item debajo del otro*/
+   /* flex-direction: column-reverse;sirve para invertir el orden de los items*/
+gap: 1rem;/*esto sirve para separar los items entre si, sin pisar lo que ya hicimos con flex*/
+   
+}
+.menu-nav li a {
+    color: white;
+
+    /*el transition siempre se hace a donde no pusimos el hover, 
+    de otra forma no va a funcionar*/
+    transition: all 3s;
+    transition: all .8s;
+   /* transition: ease;
+    transition: ease-in;
+    transition: ease-in-out;
+    transition: ease-out;*/
+}
+
+/*el a:hover se utiliza para darle una transicion a donde lo coloquemos,
+ tenemos varios elementos que podemos modificar*/
+.menu-nav li a:hover{
+    background-color: black;/*color de fondo al tocar con el mouse*/
+    color: chartreuse;/*este le va a cambiar el color a las letras*/
+    padding: 10px;/*este le va a dar mas relleno*/
+    border-radius: 30%;/* esto le va a hacer una forma mas redondeada*/
+    font-style: oblique;
+    font-family: sans-serif;
+}
+/*.menu-nav li{ 
+    margin-right: 1rem;
+} tambien podria utilizar este sistema para dar espacio al menu de navegacion, pero no es tan conveniente como el nav*/
+
+
+/*.menu-nav  li {
+    display: inline;
+    margin-right: 1rem;
+}*/
+/*ejemplos de flex-direction wrap,flex-flow */
+/* codido del Id productos*/
+#productos2{
+    margin-top: 12px;
+    display: flex; /*lo uso para alinear items*/
+    flex-wrap: wrap;/*lo que hace es optimizar el espacio en la pantalla y 
+    no permitir que los items esten sobrepasando el limite de la pantalla, entonces los envia hacia abajo*/
+    flex-wrap: nowrap;/*este lo deja al ancho que lo habiamos puesto originalmente*/
+    flex-wrap: wrap-reverse;/*este invierte el orden de los items de arriba hacia abajo*/
+    flex-flow: column-reverse wrap;/*esto seria para resumir si quiero en columnas y usando el wrap para no utilizar tanto codigo*/
+    flex-flow: row-reverse wrap;/*y esto es para hacerlo en filas en wrap, tambien resumiendo.*/
+    gap: 1rem;/*aca lo estaria aplicando para darle espacio entre si a las tarjetas de ventas*/
+    /*el gap no solo separa a los costados, sino que tambien lo hace hacia arriba y hacia abajo, 
+    esto lo que me ahorra es tener que poner a cada cosa su margen. simplifica ese concepto */
+justify-content: center;
+/*para que funcione justify-content en column necesito una altura*/
+flex-direction: column;
+height: 80rem;
+justify-content:flex-start;
+/*en este caso me lo estaria acomodando o arriba o abajo*/
+justify-content: space-between;/*este se puede usar tanto vertical como horizontalmente, todo depende de que es lo que queremos modificar*/
+
+}
+/*codigo del id:productos*/
+.card{
+    background-color: bisque;
+    /*padding por lados*/
+    padding-top: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+
+    /*atajo 1 esto sirve para no hacer uno por uno los paddings. se utilizan como las agujas del reloj. */
+    padding: 3rem 2rem 3rem 2rem;
+
+/*atajo 2 sirve para simplificar los pasos anteriores, ahi le estoy
+ indicando que quiero que los margenes superiores e inferiores sean del mismo tamaño, y que los laterales tambien */
+padding: 3rem 4rem;
+
+/*atajo 3 para que todos los lados sean iguales simplificamos en un solo padding */
+padding: 3rem;
+/**la diferencia entre padding y margin radica en que el primero hace los margenes hacia adentro (padding) y el segundo hace los margenes hacia afuera(margin)/
+/*margin*/
+margin-top: 4rem;
+margin-bottom: 4rem;
+
+/*atajo margin: si quiero que los margenes superiores sean iguales y a los margenes latelares no se modifiquen aplico lo siguiente*/
+margin: 4rem 0;
+
+/*si lo quisiera al reves: margenes superiores e inferiores sin espacio y los margenes laterales con espacio, aplico lo siguiente*/
+margin: 2rem  4rem;
+
+/*ancho de imagen*/
+width: 200px;
+/*alto de imagen*/
+/*height: 450px;*/
+
+/*esto es para darle un border a lo que necesitemos, primero pongo el estilo, luego el grosor y luego el color*/
+
+border-top:solid 10px blueviolet;
+border-right: dotted 5px yellowgreen;
+border-bottom: dashed 3px red;
+border-left: double 7px violet;
+
+/*position relative: es el limite*/
+
+position: relative;
+
+}
+
+.card__oferta {
+    position: absolute; /*el absolute indica que elemento se va a mover*/
+    top: 10px;
+    right: -50px;
+    background-color: blue;
+    /*z-index: -1; este sirve para indicarle que la superposicion sea de la card sobre la oferta*/
+
+    
+}
+
+
+   /*esto es para darle espacio entre la foto, el titutlo y el comentario*/ 
+.card__titulo{
+    margin: 1rem 0;
+}
+
+.card__imagen{
+    width: 200px;
+}
+.sticky{
+    position: sticky;
+    background-color: black;
+    color: white;
+}
+
+/*GRID*/
+.grid{
+    margin-top: 5rem;
+    /*ejemplo de columnas y filas con pixeles
+display: grid;
+    /*2 columnas*//*si quisiera mas columnas pondria mas valores en el siguiente codigo
+grid-template-columns: 300px 100px;  
+    /*2 filas*//*si quisiera mas filas le daria mas valores al siguiente codigo
+grid-template-rows: 40px 100px;*/  
+
+/*ejemplo de columnas y filas en fracciones (recomendado)*/
+display: grid;
+/*grid-template-columns: 2fr 1fr;
+grid-template-rows: 3fr 1fr;
+    */
+    /*fracciones con repeticion, simplifica la forma de hacer codigo*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    /*el dos primero indica la cantidad de columnas que quiero, y el siguiente numero el tamaño*/
+}
+.grid div{
+    border: solid 1px;
+}
+
+/*GRIDS1 POR AREAS*/
+
+/*GRID2 MOBILE FIRST*/
+/*mobile-first
+  Estilos Mobile*/
+   /*el media queries es un condicional de tamaño de la pantalla,
+   o sea, si pasa esto: aplico esto, si pasa aquello: aplico lo otro.*/
+
+
+/*CODIGO PARA CELULARES*/
+/*implicitamente este codigo va desde 0 a 768px por eso lo considera para celulares*/
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+      "nav header header"
+      "nav productos publicidad"
+      "nav servicios publicidad"
+      "nav footer footer";
+    grid-template-rows: 80px 1fr 1fr 75px; 
+    grid-template-columns: 15% auto 15%;
+    column-gap: 5px;
+    row-gap: 5px;
+    height: 100vh;/*significa viewport height: altura total de la pantalla de cualquier dispositivo */
+ }
+ 
+ .border {
+    border: 1px solid black;
+    background-color: yellow;
+ }
+/*TABLET*/
+/* en el media queries solo se escribe el comportamiento que necesitamos cambiar de acuerdo al size de la pantalla*/
+ /* cuando la pantalla mida como minimo 768px (tablet) haga este codigo*/
+ @media screen and (min-width: 768px) {
+    #grilla {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .border{
+    border: 4px solid black;
+    background-color: blue;
+    }
+     
+ }
+ /*DESKTOP*/
+ /* cuando la pantalla mida como minimo 1024px (notebooks y pc chicas) haga este codigo*/
+ @media screen and (min-width: 1024px) {
+    #grilla{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .border{
+        border: 4px solid black;
+        background-color: green;
+    }
+}
+ 
+ header {
+    grid-area: header;
+ }
+ footer {
+    grid-area: footer;
+ }
+ section#productosgrid {
+    grid-area: productos;     
+ }
+ section#servicios {
+    grid-area: servicios;     
+ }
+ nav {
+    grid-area: nav;
+ }
+ aside {
+    grid-area: publicidad;
+ }
+ /*grid items con hijos*/
+ .grid-items
+ {
+    justify-items: stretch; /* start | end | center | stretch siempre sobre el padre , y trabaja sobre los hijos pero individualmente*/
+    align-items: stretch; /* start | end | center | stretch siempre sobre el padre*/
+    display: grid;
+    width: 95%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-template-rows: 100px 100px;
+    grid-row-gap: 10px;
+    justify-content: space-evenly;/* el justify-content trabaja sobre todo el conjunto de elementos*/
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: stretch;
+    justify-content: start;
+
+    /*para que funcione el align-content necesito una altura ,porque necesita espacio para poder moverse(height)*/
+    height: 100vh;
+    background-color: red;
+    align-content: start;
+    align-content: end;
+    align-content:center ;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+    
+}
+    
+ .grid-items div {
+    border: solid 1px;
+    font-size: 21px;
+    padding: 5px;
+    background-color: yellow;
+  }
+  
+  /* si quiero mover uno o varios de los elementos individualmente utilizo los siguientes comandos*/
+    /*para que las propiedades self funciones hay que darselas a los hijo, no funciona con los padres*/
+  .self{
+    justify-self:end ;
+    align-self: center;
+  }
+
+  /*pagina de ejemplo*/
+/*usando mobile first*/
+
+#body-ejemplo{
+   display: grid; 
+   grid-template-areas:
+   "cabecera-nela"
+   "galeria"
+   "banners"
+   "footer-nela";
+   grid-template-columns: repeat(1, 1fr);
+   background-color: red;
+}
+
+/*bodyen 768 table*/
+/*estilos del HEADER*/
+@media screen and (min-width:768px) {
+    #body-ejemplo{
+        grid-template-areas: 
+   "cabecera-nela cabecera-nela"
+   "galeria galeria"
+   "banners banners"
+   "footer-nela footer-nela";
+
+   grid-template-columns:repeat(2, 1fr) ;
+    }
+    
+}
+
+  #header-nela{
+grid-area: cabecera-nela;
+display: flex;
+flex-direction:column;
+align-items: center;
+gap: 10px;
+margin-bottom: 3rem;
+
+  }
+
+@media screen and (min-width: 768px){
+    #header-nela{
+        flex-direction: row;
+
+    }
+    
+ }
+
+  .nav-nela {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+  }
+
+  .nav-nela li a{
+    color: white;
+  }
+/*estilos de la galeria*/
+
+#galeria-nela{
+    grid-area: galeria;  
+}
+#galeria-nela h2{
+    text-align: center;
+}
+
+.fotos-nela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .fotos-nela{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .fotos-nela{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.fotos-nela img{
+    width:10rem ;
+    height: 10rem;
+}
+
+/*estilos de mis banners*/
+#banners-nela{
+    grid-area: banners;
+    margin-top: 2rem;
+}
+#banners-nela h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.padre-banners{
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   gap: 1rem;
+   padding: 1.5rem;
+}
+
+@media screen and (min-width:768px) {
+    .padre-banners{
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       justify-items: center;
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .padre-banners{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+.hijo-banner{
+    text-align: center;
+}
+/*footer*/
+#footer-nela{
+    grid-area: footer-nela;
+    margin-top: 2rem;
+}
+
+#footer-nela{
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+}
+
+/* animaciones, transiciones y transformaciones*/
+/*gradientes*/
+
+.gradiente-lineal{
+    background-image: linear-gradient(to left, red, yellow);
+    background-image: linear-gradient(to right, green,blue );
+    background-image: linear-gradient(to top, black, white);
+    background-image: linear-gradient(to bottom, violet, grey);
+
+    /*ahora sin direccion (sin el to left, etc por defecto va a ir de arriba hacia abajo */
+    background-image: linear-gradient(yellowgreen, beige);}
+
+.gradiente-radial{
+    background-image: radial-gradient(red, yellow,green);
+    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    /*background-image: radial-gradient( black, red, yellow);*/
+}
+/*TRANSFORMACIONES*/
+.caja-animaciones{
+
+background-color: aqua;
+    width: 300px;
+    height: 300px;
+
+    /*translate*/
+    /*translate solo lleva dos valores,
+     el primero mueve de izquierda a derecha, y el segundo de arriba hacia abajo*/
+    transform: translate(50px, 100px);
+
+    /*para moverlo de un solo lado podemos usar los siguientes comandos*/
+    transform: translateX(60px);/*de izquida a derecha */
+    transform: translateY(20px);/* de arriba hacia abajo*/
+
+/*rotate*/
+/*deg= degrees y nunca numeros exactos como 90,80, etc*/
+transform: rotate(95deg);
+transform:rotateX(73deg);
+transform: rotateY(54deg);
+transform: rotateZ(36deg);
+
+/*transform scale*/
+
+transform: scale(1,1);/*ancho y alto*/
+transform: scaleX(2);/*ancho*/
+transform: scaleY(1);/*alto*/
+
+/*transform skew(sesgado/oblicuo)*/
+/*transform: skew(10deg,15deg);
+transform: skewX(15deg);
+transform: skewY(6deg);*/
+
+transition: height 2s, width 2s;
+}
+
+
+    
+
+.caja-animaciones:hover{
+   /* transform: scale(2);
+    margin-top: 400px;*/
+    height:100px ;
+    width: 100px;
+}
+.whatapp{
+   transition: all .1s ;
+   transition: margin-top 1s;
+    
+}
+
+.whatapp:hover{
+    transform: scale(1.5,1.5);/*los valores decimales 
+    en este caso se utiliza con puntos no con comas. */
+    cursor: pointer;/*se utiliza para cuando ponga
+     el mouse aparece la manito */
+     cursor: grab;
+}
+
+/*el focus sirve para agrandar el espacio en este caso del input*/
+
+.focus-animado{
+    transition: all 3s;
+}
+.focus-animado:focus{
+    width: 200px;
+}
+
+/*ANIMACIONES*/
+ /*KEYFRAMES*/
+
+ .keyframes{
+     margin-top: 60px;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+
+ /*a la animacion hay que darle un nombre de lo que va a suceder,*/
+animation-name: un_efecto;
+/*cuantas veces se va a repetir*/
+ animation-iteration-count: infinite;
+ /*el estilo*/
+ animation-timing-function: ease-in;
+ /*la duracion */
+ animation-duration: 2s;
+ /*en cuanto tiempo quiero que empice*/
+ animation-delay: 5s;
+ }
+ @keyframes un_efecto{
+    0%
+    width: 100px;
+    10%
+    {width: 50px;}
+
+    25%
+    {width: 300px}
+
+    50%
+    {width: 200px;
+    background-color:red;}
+
+    75%
+    {width: 300px;}
+
+    100%{
+        width: 100px;
+    background-color: violet;}
+ }
+
+ /* animacion de la barra de progreso*/
+ .barra-progreso{
+    margin-top: 40px;
+    width: 100%;
+    border: solid 1px;
+    height: 7px;
+}
+.barra-rellena{
+    border: solid 1px;
+    height: 6px;
+    /*width: 60%;*/
+    background-color: red;
+
+    animation: cargando 3s infinite;
+}
+@keyframes cargando{
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+h1{
+   animation-duration: 2s;
+   animation-name: aparecer; 
+   animation-iteration-count: infinite;
+}
+@keyframes aparecer{
+0%{
+    opacity: 0;
+}
+100%{opacity: 1;}
+}

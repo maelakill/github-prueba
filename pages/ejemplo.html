@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="body-ejemplo">
+    <header id="header-nela">
+        <a href="index.html"><img class="logo" src="../img /nela.jpg" alt="foto nela" title="nela"></a> <!--img sirve para poder insertar imagenes a nuestro sitio. el alt sirve para dejar un nombre de que se trata cuando la imagen no sale en el sitio web -->  <!--title  es un poco mas libre el texto, se usa para cuando posamos el mouse sobre la foto que haga referencia a que es la foto -->
+<!--cuando encierro una imagen, especialmente un logo dentro de un enlace, es porque normalmente el logo siempre nos lleva al sitio de inicio.-->
+<!--en la referencia siempre le conoco el index para que cada vez que se haga clic en el logo me lleve al incio de la pagina-->
+    <h1>galeria</h1>
+
+    <nav><!--menu de navegacion, puede tener textos, titulos-->
+      <!--atajo para crear varias listas con o sin link
+    ul>li*3 si quiero 3 listas, ul>li*4*a si quiero4 listas con 4 links A -->
+        <ul class="nav-nela">
+        <li><a href="../index.html">inicio</a>
+        </li>
+        <li><a href="areas.html">areas</a>
+        </li>
+        <li><a href="ejemplo.html">ejemplo</a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+
+    <section id="galeria-nela">
+      <h2>mira nuestras mejores imagenes</h2>
+      <!--si quiero un atajo para un ID utilizo un #img y me crea un div con un ID= <div id="img"></div> -->
+<!--un atajo para poner un div con una CLASS puedo colocar un punto mas el nombre de la clase directamente ej: .galeria -->
+    <div class="fotos-nela">
+      <img src="../img /DSC04991.jpg" alt="">
+      <img src="../img /DSC05301.jpg" alt="">
+      <img src="../img /nela.jpg" alt="">
+      <img src="../img /DSC05318.jpg" alt="">
+</div>
+  </section>
+
+<section id="banners-nela">
+  <h3>tomamos las mejores fotos</h3>
+  
+<div class="padre-banners">
+
+  <!--banner 1 -->
+<div class="hijo-banner">
+  <h4>usamos la mejor camara del mercado</h4> 
+  <p>usamos una cannon t7 eos rebel</p>
+</div>
+
+ <!--banner 2 -->
+<div class="hijo-banner">
+<h4>nuestro mejor servicio</h4>
+<p>servicios de books tde fotos, bodas, bebes y familias</p>
+</div>
+  <!--banner 3 -->
+
+<div class="hijo-banner">
+<h4>nuestros mejores precios</h4>
+<p>el mejor precio del mercado garantizado</p>
+</div>
+
+  <!--banner 4 -->
+    <div class="hijo-banner">
+<h4>el mejor equipo</h4>
+<p>somos 3 fotografos dedicados</p>
+     </div>
+</div>
+</section>
+
+<footer id="footer-nela">
+  <p>todos los derechos reservados para fotografias nela &copy;</p>
+</footer>
+</body>
+</html>
